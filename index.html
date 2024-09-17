@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Позиционированние CSS</title>
+	</head>
+	<body>
+		<div class="container">
+			<section class="content hero">
+				<h1>Позиционированние</h1>
+				<div class="content">
+					<p>
+						Позиционирование - это термин, означающий возможность с помощью CSS
+						изменить стандартную логику потока для элемента.
+					</p>
+					<p>
+						То есть, мы можем, подвинуть элемент куда-нибудь, можем разместить
+						один элемент сверху над остальными, можем вообще зафиксировать
+						элемент в какой-то части экрана, чтоб он оставался там, даже если
+						страница будет скроллится.
+					</p>
+				</div>
+			</section>
+			<section class="content hero">
+				<h2>Пример 1</h2>
+				<p>
+					Использование свойства
+					<code>position: static;</code>
+					у каждого блока (значение по умолчанию)
+				</p>
+				<div class="blocks blocks-1">
+					<div class="block block-1">.block-1</div>
+					<div class="block block-2">.block-2</div>
+					<div class="block block-3">.block-3</div>
+				</div>
+				<h3>Пример кода CSS</h3>
+				<!-- prettier-ignore -->
+				<code> 
+.block {
+	position: static;
+}
+			</code>
+			</section>
+			<section class="content hero">
+				<h2>Пример 2</h2>
+				<p>
+					Использование свойства
+					<code>position: relative; + top + left</code>
+					у блока .block-2
+				</p>
+				<div class="blocks blocks-2">
+					<div class="block block-1">.block-1</div>
+					<div class="block block-2">.block-2</div>
+					<div class="block block-3">.block-3</div>
+				</div>
+				<h3>Пример кода CSS</h3>
+				<!-- prettier-ignore -->
+				<code> 
+.block-1 {
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+			</code>
+			</section>
+			<section class="content hero">
+				<h2>Пример 3</h2>
+				<p>
+					Использование свойства
+					<code>position: absolute; + top + left</code> у блока .block-3 +
+					<code>position: relative;</code> у родителя
+				</p>
+				<div class="blocks blocks-3">
+					<div class="block block-1">.block-1</div>
+					<div class="block block-2">.block-2</div>
+					<div class="block block-3">.block-3</div>
+				</div>
+				<h3>Пример кода CSS</h3>
+				<!-- prettier-ignore -->
+				<code> 
+.blocks-3 {
+	position: relative;
+}
+.block-3 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+			</code>
+			</section>
+			<section class="content hero">
+				<h2>Пример 4</h2>
+				<p>
+					Использование свойства
+					<code>position: fixed; + bottom + left</code> у блока .block-1
+				</p>
+				<div class="blocks blocks-4">
+					<div class="block block-1">.block-1</div>
+					<div class="block block-2">.block-2</div>
+					<div class="block block-3">.block-3</div>
+				</div>
+				<h3>Пример кода CSS</h3>
+				<!-- prettier-ignore -->
+				<code> 
+.block-1 {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+			</code>
+			</section>
+		</div>
+	</body>
+</html>
